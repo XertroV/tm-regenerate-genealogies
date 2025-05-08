@@ -1,7 +1,13 @@
-// const string PluginName = Meta::ExecutingPlugin().Name;
-// const string MenuIconColor = "\\$f5d";
-// const string PluginIcon = Icons::Cogs;
-// const string MenuTitle = MenuIconColor + PluginIcon + "\\$z " + PluginName;
+const string PluginName = Meta::ExecutingPlugin().Name;
+const string MenuIconColor = "\\$f5d";
+const string PluginIcon = Icons::Cogs;
+const string MenuTitle = MenuIconColor + PluginIcon + "\\$z " + PluginName;
+
+void RenderMenu() {
+    if (UI::MenuItem(MenuTitle, PluginIcon, Patch_GenealogyCheck.IsApplied)) {
+        Patch_GenealogyCheck.IsApplied = !Patch_GenealogyCheck.IsApplied;
+    }
+}
 
 /*
     We need to patch a check on the number of genealogies too -- should be 0 to re-init.
