@@ -1,0 +1,9 @@
+[meta]
+name     = "Patch: Regenerate Genealogies"
+author   = "XertroV"
+category = "Map Editor"
+version  = "1.0.0"
+
+[script]
+#__DEFINES__
+# dependencies = ["MLHook", "MLFeedRaceData"]
